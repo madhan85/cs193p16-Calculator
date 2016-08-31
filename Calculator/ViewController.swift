@@ -15,8 +15,21 @@ class ViewController: UIViewController {
     
     private var userIsInTheMiddleOfTyping = false
     
+    private var digitIsDecimal = false
+    
     @IBAction private func touchDigit(sender: UIButton) {
-        let digit = sender.currentTitle!
+        var digit = sender.currentTitle!
+        
+        if(digit == ".") {
+            if !digitIsDecimal {
+                digit = "."
+                digitIsDecimal = true
+            }
+            else {
+                digit = ""
+            }
+        }
+        
         if userIsInTheMiddleOfTyping {
             display.text = display.text! + digit
         } else {
@@ -37,6 +50,8 @@ class ViewController: UIViewController {
     private var brain = CalculatorBrain()
     
     @IBAction private func performOperation(sender: UIButton) {
+        
+        digitIsDecimal = false
         
         if userIsInTheMiddleOfTyping {
             brain.setOperand(displayValue)
