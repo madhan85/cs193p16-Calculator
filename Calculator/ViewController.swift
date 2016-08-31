@@ -10,6 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBAction func backspaceAction(sender: UIButton) {
+        
+        let lastCharacter = display.text!.removeAtIndex(display.text!.endIndex.predecessor())
+        if lastCharacter == "." {
+            digitIsDecimal = false
+        }
+        userIsInTheMiddleOfTyping = true
+    }
+    
     @IBAction private func clearCalculator(sender: UIButton) {
         displayValue = 0.0
         if brain.pending != nil {
@@ -35,7 +44,6 @@ class ViewController: UIViewController {
                 digit = ""
             }
         }
-        
         if userIsInTheMiddleOfTyping {
             display.text = display.text! + digit
         } else {

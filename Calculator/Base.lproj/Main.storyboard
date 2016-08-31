@@ -67,7 +67,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <state key="normal" title="←"/>
                                                         <connections>
-                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uu1-Ai-0Ra"/>
+                                                            <action selector="backspaceAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QX2-zp-Mn8"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
