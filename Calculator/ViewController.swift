@@ -10,6 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBAction private func clearCalculator(sender: UIButton) {
+        displayValue = 0.0
+        if brain.pending != nil {
+            brain.pending!.firstOperand = 0.0
+        }
+    }
     
     @IBOutlet private weak var display: UILabel!
     
