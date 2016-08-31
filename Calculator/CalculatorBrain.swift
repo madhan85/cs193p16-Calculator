@@ -27,7 +27,8 @@ class CalculatorBrain
         "+" : Operation.BinaryOperation({$0 + $1}),
         "−" : Operation.BinaryOperation({$0 - $1}),
         "=" : Operation.Equals,
-        "±" : Operation.UnaryOperation({-$0})
+        "±" : Operation.UnaryOperation({-$0}),
+        "x2" : Operation.UnaryOperation({$0*$0})
     ]
     
     enum Operation {
