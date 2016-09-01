@@ -10,6 +10,42 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    private var logBuffer = ""
+    
+    private func updateLog(digit : String) {
+        if logBuffer == "" {
+            calculationLog.text = ""
+        }
+        if brain.isPartial {
+            if digit == "" {
+                if logBuffer == "" {
+                    logBuffer = display.text!+brain.description
+                }
+                else {
+                    logBuffer = calculationLog.text! + brain.description
+                }
+            }
+            else {
+                logBuffer = calculationLog.text! + digit
+            }
+            calculationLog.text = logBuffer
+        }
+        else {
+            if digit != "" {
+                logBuffer = calculationLog.text! + digit
+                calculationLog.text = logBuffer
+            }
+            if !userIsInTheMiddleOfTyping {
+                logBuffer = calculationLog.text! + "="
+                logBuffer = logBuffer + display.text!
+                calculationLog.text = logBuffer
+                logBuffer = ""
+            }
+        }
+    }
+    
+    @IBOutlet weak var calculationLog: UILabel!
+    
     @IBAction func backspaceAction(sender: UIButton) {
         
         let lastCharacter = display.text!.removeAtIndex(display.text!.endIndex.predecessor())
@@ -24,6 +60,8 @@ class ViewController: UIViewController {
         if brain.pending != nil {
             brain.pending!.firstOperand = 0.0
         }
+        logBuffer = ""
+        calculationLog.text = " "
     }
     
     @IBOutlet private weak var display: UILabel!
@@ -50,6 +88,7 @@ class ViewController: UIViewController {
             display.text = digit
         }
         userIsInTheMiddleOfTyping = true
+        updateLog(digit)
     }
     
     private var displayValue : Double {
@@ -76,5 +115,6 @@ class ViewController: UIViewController {
             brain.performOperation(mathematicalSymbol)
         }
         displayValue = brain.result
+        updateLog("")
     }
 }

@@ -11,6 +11,15 @@ import Foundation
 
 class CalculatorBrain
 {
+    var description = ""
+    
+    var isPartial : Bool {
+        if pending != nil {
+            return true
+        }
+        return false
+    }
+    
     private var accumulator = 0.0
     
     func setOperand(operand : Double) {
@@ -43,13 +52,17 @@ class CalculatorBrain
             switch operation {
             case .Constant(let value):
                 accumulator = value
+                description = symbol
             case .UnaryOperation(let function):
                 accumulator = function(accumulator)
+                description = symbol
             case .BinaryOperation(let function):
                 executePendingBinaryOperation()
                 pending = PendingBinaryOperationInfo(binaryFunction: function, firstOperand: accumulator)
+                description = symbol
             case .Equals:
                 executePendingBinaryOperation()
+            
             }
         }
     }
