@@ -100,6 +100,7 @@
 					9994DCCF1D1C27A200BDFAD5 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = PL6837Z264;
+						LastSwiftMigration = 0820;
 					};
 				};
 			};
@@ -260,6 +261,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.madhan.Calculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -271,6 +273,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.madhan.Calculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
