@@ -198,6 +198,35 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hx7-7X-EaR">
+                                <rect key="frame" x="20" y="72" width="118" height="283"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTL-C9-5Zl">
+                                        <rect key="frame" x="0.0" y="0.0" width="118" height="63.5"/>
+                                        <color key="backgroundColor" red="0.89340641359999995" green="0.89340641359999995" blue="0.89340641359999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="×"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="04F-77-TKf">
+                                        <rect key="frame" x="0.0" y="73.5" width="118" height="63"/>
+                                        <color key="backgroundColor" red="0.89340641359999995" green="0.89340641359999995" blue="0.89340641359999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="÷"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFj-8T-uZE">
+                                        <rect key="frame" x="0.0" y="146.5" width="118" height="63.5"/>
+                                        <color key="backgroundColor" red="0.89340641359999995" green="0.89340641359999995" blue="0.89340641359999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="+"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="00w-Mn-Ggz">
+                                        <rect key="frame" x="0.0" y="220" width="118" height="63"/>
+                                        <color key="backgroundColor" red="0.89340641359999995" green="0.89340641359999995" blue="0.89340641359999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="−"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0Re-vf-ZXZ">
                                 <rect key="frame" x="16" y="72" width="343" height="107.5"/>
                                 <subviews>
@@ -242,6 +271,8 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="D6P-Bh-Inh" firstAttribute="top" secondItem="eMc-bp-nUd" secondAttribute="bottom" constant="8" symbolic="YES" id="0EQ-kn-qPx"/>
+                            <constraint firstItem="hx7-7X-EaR" firstAttribute="bottom" secondItem="D6P-Bh-Inh" secondAttribute="bottom" id="0Vv-Ma-wO9"/>
                             <constraint firstItem="D6P-Bh-Inh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="3nf-LD-deQ"/>
                             <constraint firstItem="0Re-vf-ZXZ" firstAttribute="top" secondItem="eMc-bp-nUd" secondAttribute="bottom" constant="8" symbolic="YES" id="9PL-u5-1H4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eMc-bp-nUd" secondAttribute="trailing" id="EHu-Pz-a2X"/>
@@ -250,18 +281,48 @@
                             <constraint firstAttribute="leadingMargin" secondItem="eMc-bp-nUd" secondAttribute="leading" id="R7l-aV-wfu"/>
                             <constraint firstItem="D6P-Bh-Inh" firstAttribute="leading" secondItem="0Re-vf-ZXZ" secondAttribute="leading" id="VEh-Jk-TXb"/>
                             <constraint firstItem="0Re-vf-ZXZ" firstAttribute="height" secondItem="Cu4-Dd-Q2P" secondAttribute="height" id="WGn-dj-8Ic"/>
+                            <constraint firstItem="hx7-7X-EaR" firstAttribute="width" secondItem="gQu-NK-MAo" secondAttribute="width" id="dgv-bY-YIq"/>
+                            <constraint firstItem="hx7-7X-EaR" firstAttribute="top" secondItem="D6P-Bh-Inh" secondAttribute="top" id="eyk-Cq-nVV"/>
+                            <constraint firstItem="hx7-7X-EaR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="iWt-6f-U0A"/>
+                            <constraint firstItem="D6P-Bh-Inh" firstAttribute="leading" secondItem="hx7-7X-EaR" secondAttribute="trailing" constant="8" id="k0b-cU-3Aj"/>
                             <constraint firstItem="D6P-Bh-Inh" firstAttribute="trailing" secondItem="0Re-vf-ZXZ" secondAttribute="trailing" id="nGX-7a-Wgl"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="D6P-Bh-Inh" secondAttribute="bottom" constant="20" id="tQE-Iv-1zj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="D6P-Bh-Inh" secondAttribute="trailing" id="ufb-e2-oc2"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="hx7-7X-EaR"/>
                                 <exclude reference="0Re-vf-ZXZ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="9PL-u5-1H4"/>
+                                <exclude reference="WGn-dj-8Ic"/>
+                                <exclude reference="0EQ-kn-qPx"/>
+                                <exclude reference="3nf-LD-deQ"/>
+                                <exclude reference="G2o-UX-db5"/>
+                                <exclude reference="VEh-Jk-TXb"/>
+                                <exclude reference="nGX-7a-Wgl"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="subviews">
+                                <include reference="hx7-7X-EaR"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="0EQ-kn-qPx"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="subviews">
                                 <include reference="0Re-vf-ZXZ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="9PL-u5-1H4"/>
+                                <include reference="WGn-dj-8Ic"/>
+                                <include reference="3nf-LD-deQ"/>
+                                <include reference="G2o-UX-db5"/>
+                                <include reference="VEh-Jk-TXb"/>
+                                <include reference="nGX-7a-Wgl"/>
                             </mask>
                         </variation>
                     </view>
